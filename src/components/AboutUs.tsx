@@ -4,13 +4,6 @@ import DiagonalDivider from "./DiagonalDivider";
 import ImageSlider from "./ImageSlider";
 
 export default function AboutUs() {
-  const stats = [
-    { value: "480+", label: "Vehicles Transformed" },
-    { value: "5+", label: "Years Combined Craft" },
-    { value: "100%", label: "Showroom Client Rating" },
-    { value: "1", label: "Definitive Quality Standard" },
-  ];
-
   return (
     <section id="about" className="pb-24 bg-black relative overflow-hidden scroll-mt-20">
       
@@ -50,18 +43,6 @@ export default function AboutUs() {
                 <span className="h-1 w-1 rounded-full bg-zinc-700" />
                 <span className="text-xs font-mono font-bold tracking-widest text-cyan-400 bg-cyan-500/10 px-3.5 py-1.5 rounded-md border border-cyan-500/20 shadow-[0_0_15px_rgba(34,211,238,0.05)]">MAINTAIN</span>
               </div>
-            </div>
-
-            {/* Premium Highlights Stat Area */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 pt-4 border-t border-white/5">
-              {stats.map((stat, i) => (
-                <div key={i} className="space-y-1">
-                  <div className="text-2xl sm:text-3xl font-display font-black text-white">{stat.value}</div>
-                  <div className="text-[10px] font-mono uppercase tracking-wider text-cyan-600/70 leading-tight">
-                    {stat.label}
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
 
