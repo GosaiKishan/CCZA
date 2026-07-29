@@ -1,5 +1,5 @@
 import React from "react";
-import { MapPin, Phone, Mail, Star, Heart, ExternalLink, Instagram, Facebook } from "lucide-react";
+import { MapPin, Phone, Mail, Star, Heart, ExternalLink, Instagram } from "lucide-react";
 import DiagonalDivider from "./DiagonalDivider";
 
 interface FooterProps {
@@ -76,16 +76,6 @@ export default function Footer({ onNavigate }: FooterProps) {
                   className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-white/15 hover:border-cyan-400/50 transition-all duration-300"
                 >
                   <Instagram className="w-4 h-4" />
-                </a>
-                <a
-                  href="https://www.facebook.com/cartelclean_za"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="Facebook"
-                  title="Follow us on Facebook"
-                  className="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-white/15 hover:border-cyan-400/50 transition-all duration-300"
-                >
-                  <Facebook className="w-4 h-4" />
                 </a>
               </li>
             </ul>
