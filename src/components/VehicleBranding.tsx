@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
 import { handleDriveImageError } from '../utils/driveImage';
+import { VEHICLE_BRANDING_IMAGES } from '../data/vehicleBrandingData';
 
 interface VehicleBrandingProps {
   onSelectService: (serviceName: string) => void;
@@ -132,26 +133,24 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                     </h4>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
-                      <img
-                        src="https://lh3.googleusercontent.com/d/1B5Ge5B1UMEePu8wcn9UowDOlZIiL9CYN"
-                        alt="Militia Defense Design Concept 1"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        referrerPolicy="no-referrer"
-                        loading="lazy"
-                        onError={(e) => handleDriveImageError(e)}
-                      />
-                    </div>
-                    <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
-                      <img
-                        src="https://lh3.googleusercontent.com/d/1jAmFchTlth5TsqfXN4jrqo6Xz7WgloBR"
-                        alt="Militia Defense Design Concept 2"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        referrerPolicy="no-referrer"
-                        loading="lazy"
-                        onError={(e) => handleDriveImageError(e)}
-                      />
-                    </div>
+                    {VEHICLE_BRANDING_IMAGES.designConcepts.map((item) => (
+                      <div key={item.id} className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
+                        <img
+                          src={item.url}
+                          alt={item.alt}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          referrerPolicy="no-referrer"
+                          loading="lazy"
+                          onError={(e) => {
+                            if (item.driveFallbackUrl) {
+                              handleDriveImageError(e, item.driveFallbackUrl);
+                            } else {
+                              handleDriveImageError(e);
+                            }
+                          }}
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
 
@@ -164,26 +163,24 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                     </h4>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
-                      <img
-                        src="https://lh3.googleusercontent.com/d/1xAqgY1xmFNeYCXaySj3iYPb482ZwGQIX"
-                        alt="Militia Defense Final Install 1"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        referrerPolicy="no-referrer"
-                        loading="lazy"
-                        onError={(e) => handleDriveImageError(e)}
-                      />
-                    </div>
-                    <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
-                      <img
-                        src="https://lh3.googleusercontent.com/d/1nTdFbySZ436djqU9FoCDyE4jIVjpQ26T"
-                        alt="Militia Defense Final Install 2"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        referrerPolicy="no-referrer"
-                        loading="lazy"
-                        onError={(e) => handleDriveImageError(e)}
-                      />
-                    </div>
+                    {VEHICLE_BRANDING_IMAGES.finalInstalls.map((item) => (
+                      <div key={item.id} className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
+                        <img
+                          src={item.url}
+                          alt={item.alt}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          referrerPolicy="no-referrer"
+                          loading="lazy"
+                          onError={(e) => {
+                            if (item.driveFallbackUrl) {
+                              handleDriveImageError(e, item.driveFallbackUrl);
+                            } else {
+                              handleDriveImageError(e);
+                            }
+                          }}
+                        />
+                      </div>
+                    ))}
                   </div>
                 </div>
 

@@ -125,7 +125,6 @@ export default function App() {
             <FadeInSection>
               <WorkGalleryShowcase />
             </FadeInSection>
-            <DiagonalDivider />
 
             {/* Knowledge Base */}
             <FadeInSection>

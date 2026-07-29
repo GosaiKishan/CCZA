@@ -109,9 +109,7 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
               />
             ) : (
               <div className="text-left pl-2">
-                <h1 className="text-lg sm:text-xl lg:text-2xl font-display font-extrabold tracking-[0.25em] uppercase text-white flex items-center gap-1">
-                  Cartel <span className="font-black italic text-cyan-400 shrink-0">Clean</span>
-                </h1>
+                <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">CARTEL</span>
               </div>
             )}
           </button>
