@@ -1,8 +1,8 @@
 import React from "react";
 
 interface DiagonalDividerProps {
-  topBg?: string;    // Background color of the preceding section, e.g. "#0a0a0b" or "#0d0d0f"
-  bottomBg?: string; // Background color of the current section, e.g. "#0a0a0b" or "#0d0d0f"
+  topBg?: string;    // Background color of the preceding section, e.g. "#000000"
+  bottomBg?: string; // Background color of the current section, e.g. "#000000"
   className?: string;
 }
 
@@ -11,18 +11,22 @@ export default function DiagonalDivider({
   bottomBg = "#000000",
   className = "",
 }: DiagonalDividerProps) {
-  const gradientId = React.useId();
+  const rawId = React.useId();
+  const cleanId = rawId.replace(/[^a-zA-Z0-9_-]/g, "");
 
   return (
-    <div className={`w-full relative h-10 md:h-16 select-none pointer-events-none overflow-hidden z-20 ${className}`}>
+    <div 
+      className={`w-full relative h-8 md:h-12 select-none pointer-events-none overflow-hidden z-20 bg-black ${className}`}
+      style={{ backgroundColor: "#000000" }}
+    >
       <svg
         viewBox="0 0 1000 100"
         preserveAspectRatio="none"
-        className="w-full h-full block"
+        className="w-full h-full block bg-black"
+        style={{ backgroundColor: "#000000" }}
       >
         <defs>
-          {/* Precise industrial linear glow gradient running parallel to the race-slant */}
-          <linearGradient id={gradientId} x1="0%" y1="100%" x2="100%" y2="0%">
+          <linearGradient id={`divider-grad-${cleanId}`} x1="0%" y1="100%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#06b6d4" stopOpacity="0" />
             <stop offset="25%" stopColor="#06b6d4" stopOpacity="0.4" />
             <stop offset="50%" stopColor="#2563eb" stopOpacity="0.15" />
@@ -34,13 +38,13 @@ export default function DiagonalDivider({
         {/* 1. Fill the top-left triangle with the preceding section's background */}
         <polygon
           points="0,0 1000,0 0,100"
-          fill={topBg}
+          fill={topBg || "#000000"}
         />
 
         {/* 2. Fill the bottom-right triangle with the current section's background */}
         <polygon
           points="1000,0 1000,100 0,100"
-          fill={bottomBg}
+          fill={bottomBg || "#000000"}
         />
 
         {/* 3. The precise hairline diagonal cut matching the racing angle */}
@@ -60,7 +64,7 @@ export default function DiagonalDivider({
           y1="100"
           x2="1000"
           y2="0"
-          stroke={`url(#${gradientId})`}
+          stroke={`url(#divider-grad-${cleanId})`}
           strokeWidth="2"
           vectorEffect="non-scaling-stroke"
           className="opacity-60"
@@ -69,3 +73,4 @@ export default function DiagonalDivider({
     </div>
   );
 }
+

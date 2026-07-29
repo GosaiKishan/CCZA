@@ -1,4 +1,5 @@
 import React, { useState, useRef } from "react";
+import { handleDriveImageError } from "../utils/driveImage";
 
 const galleryImages = [
   { id: 1, url: "https://lh3.googleusercontent.com/d/14hHypM89VYtdNdhe6xLI8_0TyixJu2wl", title: "Detailing Work Showcase 1" },
@@ -93,6 +94,7 @@ export default function WorkGalleryShowcase() {
                   loading="lazy"
                   className="w-full h-full object-cover object-center rounded-none border-none"
                   referrerPolicy="no-referrer"
+                  onError={(e) => handleDriveImageError(e)}
                 />
               </div>
             );

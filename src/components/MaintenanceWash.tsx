@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { Check } from 'lucide-react';
+import { handleDriveImageError } from '../utils/driveImage';
 
 interface MaintenanceWashProps {
   onSelectService: (serviceName: string) => void;
@@ -89,6 +90,7 @@ export default function MaintenanceWash({ onSelectService }: MaintenanceWashProp
                   alt={washImage.alt} 
                   className="w-full h-full object-cover rounded-3xl"
                   referrerPolicy="no-referrer"
+                  onError={(e) => handleDriveImageError(e)}
                 />
 
                 {/* Subtle dark vignette overlay */}

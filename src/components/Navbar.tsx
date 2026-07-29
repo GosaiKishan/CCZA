@@ -95,10 +95,12 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
                 loading="eager"
                 decoding="async"
                 fetchPriority="high"
-                className="h-auto w-[210px] sm:w-[260px] md:w-[320px] lg:w-[360px] xl:w-[410px] max-h-18 sm:max-h-22 md:max-h-28 lg:max-h-32 xl:max-h-36 object-contain transition-all duration-300 group-hover:scale-[1.03] filter brightness-[1.35] contrast-[1.25] select-none pointer-events-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]"
+                className="h-auto w-[210px] sm:w-[260px] md:w-[320px] lg:w-[360px] xl:w-[410px] max-h-18 sm:max-h-22 md:max-h-28 lg:max-h-32 xl:max-h-36 object-contain transition-all duration-300 group-hover:scale-[1.03] filter brightness-[1.2] contrast-[1.15] select-none pointer-events-none drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]"
                 style={{ mixBlendMode: "screen" }}
                 onError={() => {
                   if (logoSrc.includes("googleusercontent.com")) {
+                    setLogoSrc("https://drive.google.com/thumbnail?id=1womKO9xZ4DmMFHYLwhnH7bPkvAkgml_a&sz=w1000");
+                  } else if (logoSrc.includes("thumbnail")) {
                     setLogoSrc("https://docs.google.com/uc?export=view&id=1womKO9xZ4DmMFHYLwhnH7bPkvAkgml_a");
                   } else {
                     setLogoHasError(true);

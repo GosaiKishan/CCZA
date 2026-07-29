@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Check, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react';
+import { handleDriveImageError } from '../utils/driveImage';
 
 interface VehicleBrandingProps {
   onSelectService: (serviceName: string) => void;
@@ -138,6 +139,7 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
                         loading="lazy"
+                        onError={(e) => handleDriveImageError(e)}
                       />
                     </div>
                     <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
@@ -147,6 +149,7 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
                         loading="lazy"
+                        onError={(e) => handleDriveImageError(e)}
                       />
                     </div>
                   </div>
@@ -168,6 +171,7 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
                         loading="lazy"
+                        onError={(e) => handleDriveImageError(e)}
                       />
                     </div>
                     <div className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
@@ -177,6 +181,7 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                         referrerPolicy="no-referrer"
                         loading="lazy"
+                        onError={(e) => handleDriveImageError(e)}
                       />
                     </div>
                   </div>

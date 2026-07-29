@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { ArrowRight, HelpCircle, RefreshCw } from "lucide-react";
 import { motion } from "motion/react";
 import DiagonalDivider from "./DiagonalDivider";
+import { handleDriveImageError } from "../utils/driveImage";
 
 interface PaintProtectionFilmProps {
   onSelectService: (serviceName: string) => void;
@@ -77,6 +78,7 @@ function PPFCard({ number, title, description, imageUrl }: PPFCardProps) {
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
             referrerPolicy="no-referrer"
             loading="lazy"
+            onError={(e) => handleDriveImageError(e)}
           />
         </div>
       </motion.div>
