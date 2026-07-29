@@ -1,0 +1,6 @@
+{
+  "name": "Cartel Clean",
+  "description": "Premium Paint Protection Film (PPF) and bespoke car detailing studio in Johannesburg.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
