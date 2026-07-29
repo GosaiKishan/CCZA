@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ArrowRight, HelpCircle, RefreshCw } from "lucide-react";
 import { motion } from "motion/react";
-import DiagonalDivider from "./DiagonalDivider";
 import { handleDriveImageError } from "../utils/driveImage";
 
 interface PaintProtectionFilmProps {
@@ -109,9 +108,8 @@ export default function PaintProtectionFilm({ onSelectService, onLearnMore }: Pa
   ];
 
   return (
-    <section id="ppf" className="pb-24 bg-black scroll-mt-20">
-      <DiagonalDivider topBg="#000000" bottomBg="#000000" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16">
+    <section id="ppf" className="py-24 bg-black scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Title Block */}
         <div className="mb-16">

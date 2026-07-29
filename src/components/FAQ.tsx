@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import DiagonalDivider from "./DiagonalDivider";
 
 const faqs = [
   {
@@ -34,11 +33,10 @@ export default function FAQ() {
   };
 
   return (
-    <section id="faq" className="pb-24 bg-black scroll-mt-20 relative overflow-hidden">
-      <DiagonalDivider topBg="#000000" bottomBg="#000000" />
+    <section id="faq" className="py-24 bg-black scroll-mt-20 relative overflow-hidden">
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/5 rounded-full blur-[100px] pointer-events-none" />
       
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-12 md:pt-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16 space-y-4">
           <h2 className="text-3xl sm:text-4xl font-display font-black text-white uppercase tracking-tight">
             Frequently Asked Questions

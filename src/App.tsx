@@ -5,7 +5,6 @@ import AboutUs from "./components/AboutUs";
 import PaintProtectionFilm from "./components/PaintProtectionFilm";
 import CeramicCoatings from "./components/CeramicCoatings";
 import Services from "./components/Services";
-import DiagonalDivider from "./components/DiagonalDivider";
 import FAQ from "./components/FAQ";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
@@ -81,8 +80,6 @@ export default function App() {
               onBookNow={() => handleNavigate("book-now")} 
             />
 
-            <DiagonalDivider />
-
             {/* Storytelling & Studio standards ("About Us") */}
             <FadeInSection>
               <AboutUs />
@@ -95,31 +92,26 @@ export default function App() {
                 onLearnMore={() => setCurrentView("ppf-details")}
               />
             </FadeInSection>
-            <DiagonalDivider />
 
             {/* Ceramic Coatings Dedicated Showcase */}
             <FadeInSection>
               <CeramicCoatings onLearnMore={() => setCurrentView("ceramic-details")} />
             </FadeInSection>
-            <DiagonalDivider />
 
             {/* Maintenance Wash Section */}
             <FadeInSection>
               <MaintenanceWash onSelectService={handleSelectService} />
             </FadeInSection>
-            <DiagonalDivider />
 
             {/* Vehicle Branding Section */}
             <FadeInSection>
               <VehicleBranding onSelectService={handleSelectService} />
             </FadeInSection>
-            <DiagonalDivider />
 
             {/* Other Services CTA Section */}
             <FadeInSection>
               <OtherServicesCTA onLearnMore={() => handleNavigate("services-details")} />
             </FadeInSection>
-            <DiagonalDivider />
 
             {/* Work Showcase Gallery */}
             <FadeInSection>

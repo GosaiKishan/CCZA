@@ -1,12 +1,10 @@
 import React from "react";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import DiagonalDivider from "./DiagonalDivider";
 
 export default function ContactUs() {
   return (
-    <section id="contact" className="pb-24 bg-black scroll-mt-20">
-      <DiagonalDivider topBg="#000000" bottomBg="#000000" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16">
+    <section id="contact" className="py-24 bg-black scroll-mt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16 max-w-2xl">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-white text-[10px] font-mono uppercase tracking-widest mb-6">
             <MapPin className="w-3.5 h-3.5 text-zinc-300" />

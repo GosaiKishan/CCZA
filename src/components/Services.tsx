@@ -11,7 +11,6 @@ import {
 } from "lucide-react";
 import { motion, AnimatePresence, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { servicesData, categories, ServiceItem } from "../data/services";
-import DiagonalDivider from "./DiagonalDivider";
 
 interface ServicesProps {
   onSelectService: (serviceName: string) => void;
@@ -159,8 +158,7 @@ export default function Services({ onSelectService }: ServicesProps) {
   });
 
   return (
-    <section id="services" className="pb-24 bg-black scroll-mt-20 relative overflow-hidden">
-      <DiagonalDivider topBg="#000000" bottomBg="#000000" />
+    <section id="services" className="py-24 bg-black scroll-mt-20 relative overflow-hidden">
       
       {/* Background Glow */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[150px] pointer-events-none" />

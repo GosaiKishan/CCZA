@@ -1,6 +1,5 @@
 import React from "react";
 import { MapPin, Phone, Mail, Star, Heart, ExternalLink, Instagram } from "lucide-react";
-import DiagonalDivider from "./DiagonalDivider";
 
 interface FooterProps {
   onNavigate: (sectionId: string) => void;
@@ -8,9 +7,8 @@ interface FooterProps {
 
 export default function Footer({ onNavigate }: FooterProps) {
   return (
-    <footer className="bg-black text-zinc-400 pb-8">
-      <DiagonalDivider topBg="#000000" bottomBg="#000000" />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 md:pt-16">
+    <footer className="bg-black text-zinc-400 pb-8 pt-12 md:pt-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Upper Column Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 border-b border-white/5 pb-12">
