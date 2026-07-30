@@ -108,8 +108,14 @@ export default function Navbar({ onNavigate, activeSection }: NavbarProps) {
                 }}
               />
             ) : (
-              <div className="text-left pl-2">
-                <span className="text-xs font-mono tracking-widest text-zinc-400 uppercase">CARTEL</span>
+              <div className="flex items-center gap-2 select-none py-1">
+                <div className="w-10 h-10 rounded-xl bg-white/10 border border-white/20 flex items-center justify-center font-display font-black text-white text-lg tracking-wider">
+                  C<span className="text-cyan-400 italic">A</span>
+                </div>
+                <div className="flex flex-col text-left">
+                  <span className="text-xs font-display font-bold tracking-[0.25em] uppercase text-white">CARTEL</span>
+                  <span className="text-[9px] font-mono tracking-[0.3em] text-cyan-400 uppercase">CLEAN ZA</span>
+                </div>
               </div>
             )}
           </button>

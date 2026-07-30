@@ -77,7 +77,7 @@ export default function ServicesDetailsPage({ onBack, onSelectService }: Service
   };
 
   const handleWhatsApp = (serviceName: string) => {
-    const message = `Hi Cartel Clean 🇿🇦! I would like to book/inquire about your "${serviceName}" service package. Let me know your available schedule!`;
+    const message = `Hi Cartel Clean! I would like to book/inquire about your "${serviceName}" service package. Let me know your available schedule!`;
     window.open(`https://wa.me/27646568846?text=${encodeURIComponent(message)}`, "_blank");
   };
 

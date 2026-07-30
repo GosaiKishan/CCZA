@@ -130,7 +130,7 @@ export default function Services({ onSelectService }: ServicesProps) {
   const handleWhatsApp = (serviceName: string) => {
     window.open(
       `https://wa.me/27646568846?text=${encodeURIComponent(
-        `Hi Cartel Clean 🇿🇦! I'm interested in booking the ${serviceName} service.`
+        `Hi Cartel Clean! I'm interested in booking the ${serviceName} service.`
       )}`,
       "_blank"
     );

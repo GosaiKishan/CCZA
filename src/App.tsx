@@ -28,7 +28,7 @@ export default function App() {
 
   const handleNavigate = (sectionId: string) => {
     if (sectionId === "book-now") {
-      openWhatsApp("Hi Cartel Clean 🇿🇦! I would like to inquire about your premium vehicle detailing and styling packages.");
+      openWhatsApp("Hi Cartel Clean! I would like to inquire about your premium vehicle detailing and styling packages.");
       return;
     }
     
@@ -62,7 +62,7 @@ export default function App() {
   };
 
   const handleSelectService = (serviceName: string) => {
-    openWhatsApp(`Hi Cartel Clean 🇿🇦! I would like to book/inquire about your "${serviceName}" service package. Let me know your available schedule!`);
+    openWhatsApp(`Hi Cartel Clean! I would like to book/inquire about your "${serviceName}" service package. Let me know your available schedule!`);
   };
 
   return (
