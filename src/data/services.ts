@@ -148,7 +148,7 @@ export const servicesData: ServiceItem[] = [
     duration: "1 - 2 Hours",
     finish: "Water-shearing clarity",
     warranty: "1 Year / 20,000 km",
-    idealFor: "Enhancing safety and clear sightlines during heavy Johannesburg rainstorms. Water beads off the screen automatically.",
+    idealFor: "Enhancing safety and clear sightlines during heavy seasonal rainstorms. Water beads off the screen automatically.",
     includes: [
       "Mechanical glass decontamination to remove road film & mineral spots",
       "Glass polishing for absolute optical flat clarity",

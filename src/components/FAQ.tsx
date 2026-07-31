@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     question: "Do you offer mobile detailing services?",
-    answer: "Yes, we offer convenient mobile detailing services for maintenance washes and interior care at your location. For specialized services like paint correction, ceramic coatings, and PPF installations, we highly recommend visiting our controlled Johannesburg studio to ensure absolute perfection free from environmental contaminants like dust or direct sunlight."
+    answer: "Yes, we offer convenient mobile detailing services for maintenance washes and interior care at your location. For specialized services like paint correction, ceramic coatings, and PPF installations, we highly recommend visiting our controlled Lenasia studio (22 Chrysanthemum St, Lenasia, 1820) to ensure absolute perfection free from environmental contaminants like dust or direct sunlight."
   },
   {
     question: "How often should I have my car detailed?",

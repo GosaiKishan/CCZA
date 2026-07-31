@@ -14,7 +14,7 @@ export default function ContactUs() {
             Contact & Location
           </h2>
           <p className="text-zinc-400 text-sm sm:text-base">
-            Ready to elevate your vehicle's aesthetic? Reach out to us to schedule an appointment or visit our premier detailing studio in Johannesburg.
+            Ready to elevate your vehicle's aesthetic? Reach out to us to schedule an appointment or visit our premier detailing studio in Lenasia. Mobile service available.
           </p>
         </div>
 
@@ -29,8 +29,8 @@ export default function ContactUs() {
                 <div>
                   <h4 className="text-white font-display font-bold uppercase tracking-wider mb-2">Location</h4>
                   <p className="text-zinc-400 text-sm leading-relaxed">
-                    Cartelclean<br />
-                    Johannesburg, South Africa
+                    22 Chrysanthemum St, Lenasia, 1820<br />
+                    <span className="text-white font-mono text-xs mt-1 block">Mobile service available</span>
                   </p>
                 </div>
               </div>
@@ -70,7 +70,7 @@ export default function ContactUs() {
           {/* Map */}
           <div className="w-full h-[400px] lg:h-full min-h-[400px] rounded-2xl overflow-hidden border border-white/5 bg-[#111113]">
             <iframe
-              src="https://maps.google.com/maps?t=m&q=Cartelclean,+Johannesburg&ie=UTF8&iwloc=&output=embed"
+              src="https://maps.google.com/maps?t=m&q=22+Chrysanthemum+St,+Lenasia,+1820&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="100%"
               style={{ border: 0 }}

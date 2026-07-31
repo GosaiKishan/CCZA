@@ -16,7 +16,7 @@ export default function Footer({ onNavigate }: FooterProps) {
           {/* Brand Meta */}
           <div className="md:col-span-1 space-y-4 flex flex-col items-start">
             <p className="text-xs leading-relaxed text-zinc-500">
-              Johannesburg's premier bespoke multi-stage detailing, premium vinyl wrapping, and expert surface protection studio. Preserving vehicle value through precision care.
+              Lenasia's premier bespoke multi-stage detailing, premium vinyl wrapping, and expert surface protection studio. Mobile service available. Preserving vehicle value through precision care.
             </p>
 
             <div className="flex items-center gap-2 text-xs text-white font-mono">
@@ -53,7 +53,8 @@ export default function Footer({ onNavigate }: FooterProps) {
               <li className="flex items-start gap-2.5 text-zinc-400">
                 <MapPin className="w-4 h-4 text-white shrink-0 mt-0.5" />
                 <span>
-                  22 Chrysanthemum St, Lenasia, 1820, Johannesburg, South Africa
+                  22 Chrysanthemum St, Lenasia, 1820<br />
+                  <span className="text-white font-mono text-[10px] mt-0.5 block">Mobile service available</span>
                 </span>
               </li>
               <li className="flex items-center gap-2.5 text-zinc-400">

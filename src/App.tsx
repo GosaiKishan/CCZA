@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import AboutUs from "./components/AboutUs";
@@ -21,6 +21,12 @@ import WorkGalleryShowcase from "./components/WorkGalleryShowcase";
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
   const [currentView, setCurrentView] = useState<"home" | "ppf-details" | "ceramic-details" | "services-details">("home");
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setCurrentView("home");
+    setActiveSection("hero");
+  }, []);
 
   const openWhatsApp = (message: string) => {
     window.open(`https://wa.me/27646568846?text=${encodeURIComponent(message)}`, "_blank");
@@ -130,17 +136,26 @@ export default function App() {
           </>
         ) : currentView === "ppf-details" ? (
           <PPFDetailsPage 
-            onBack={() => setCurrentView("home")} 
+            onBack={() => {
+              setCurrentView("home");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }} 
             onSelectService={handleSelectService} 
           />
         ) : currentView === "ceramic-details" ? (
           <CeramicCoatingsDetailsPage 
-            onBack={() => setCurrentView("home")} 
+            onBack={() => {
+              setCurrentView("home");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }} 
             onSelectService={handleSelectService} 
           />
         ) : (
           <ServicesDetailsPage
-            onBack={() => setCurrentView("home")}
+            onBack={() => {
+              setCurrentView("home");
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
             onSelectService={handleSelectService}
           />
         )}

@@ -7,7 +7,6 @@ const images = [
   'https://lh3.googleusercontent.com/d/1lxAjx4UDLmOtZKzFGNdLD61u78W12dh5',
   'https://lh3.googleusercontent.com/d/18rer-ZIL81iru54-QXVjqgJiG_OXqsc4',
   'https://lh3.googleusercontent.com/d/15V1lJ8mTfz3rjcBLWa5DvCad0vCB67PE',
-  'https://lh3.googleusercontent.com/d/1JBJCwmj1ZJwXRqDtxt4YLMgLK2EDMyLX',
   'https://lh3.googleusercontent.com/d/1o3ZORFzDE90pA9FFG05_xRRa0yhdCYH2',
 ];
 

@@ -23,6 +23,7 @@ const galleryImages = [
   { id: 17, url: "https://lh3.googleusercontent.com/d/1AagzMfI6tW4hQGfxlmrZtiQJbqbS_OU-", title: "Detailing Work Showcase 17" },
   { id: 18, url: "https://lh3.googleusercontent.com/d/14iW64QVSBBYnjMvE8Ps50c2lBmviaG4V", title: "Detailing Work Showcase 18" },
   { id: 19, url: "https://lh3.googleusercontent.com/d/1U3ukkMJWVX8udy7T84AKDQ4BwlhIkav0", title: "Detailing Work Showcase 19" },
+  { id: 22, url: "https://lh3.googleusercontent.com/d/1gX9TV54FYNxsBpCEXtEfMNAPBdwQH5xR", title: "Detailing Work Showcase 22" },
   { id: 20, url: "https://lh3.googleusercontent.com/d/1EK8IT9kiQrFNHu93Gubd4g2teiL0N6sC", title: "Detailing Work Showcase 20" },
   { id: 21, url: "https://lh3.googleusercontent.com/d/1SM7tFqcol5F2v3aWWHQB4Ti4OCTWlywz", title: "Detailing Work Showcase 21" },
 ];
@@ -212,8 +213,8 @@ export default function WorkGalleryShowcase() {
         <div className="mt-4">
           <div
             ref={thumbnailContainerRef}
-            className="flex gap-2.5 overflow-x-auto pb-2 pt-1 px-1 scrollbar-thin scrollbar-thumb-amber-500/30 scrollbar-track-zinc-900 scroll-smooth"
-            style={{ scrollbarWidth: "thin" }}
+            className="flex gap-2.5 overflow-x-auto pb-3 pt-2 px-4 sm:px-6 scrollbar-thin scrollbar-thumb-amber-500/30 scrollbar-track-zinc-900 scroll-smooth"
+            style={{ scrollbarWidth: "thin", WebkitOverflowScrolling: "touch" }}
           >
             {galleryImages.map((img, idx) => {
               const isActive = idx === currentIndex;

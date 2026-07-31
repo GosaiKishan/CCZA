@@ -160,15 +160,17 @@ export default function CeramicCoatingsDetailsPage({ onBack, onSelectService }: 
                 </div>
 
                 {/* Bottom Pricing & Inquire */}
-                <div className="pt-6 mt-6 border-t border-white/5 flex items-center justify-between">
-                  <div className="flex flex-col">
-                    <span className="text-[10px] font-mono uppercase text-zinc-500">
-                      {coating.price === "Get a Quote" ? "Pricing" : "Value Starts From"}
-                    </span>
-                    <span className="text-sm font-display font-black tracking-tight text-white mt-0.5">
-                      {coating.price}
-                    </span>
-                  </div>
+                <div className={`pt-6 mt-6 border-t border-white/5 flex items-center ${coating.price === "Get a Quote" ? "justify-end" : "justify-between"}`}>
+                  {coating.price !== "Get a Quote" && (
+                    <div className="flex flex-col">
+                      <span className="text-[10px] font-mono uppercase text-zinc-500">
+                        Value Starts From
+                      </span>
+                      <span className="text-sm font-display font-black tracking-tight text-white mt-0.5">
+                        {coating.price}
+                      </span>
+                    </div>
+                  )}
 
                   <button
                     onClick={() => onSelectService(`Labocosmetica ${coating.title} Ceramic Coating`)}
@@ -182,6 +184,33 @@ export default function CeramicCoatingsDetailsPage({ onBack, onSelectService }: 
               </motion.div>
             );
           })}
+        </div>
+
+        {/* Specialty Ceramic Treatments Images Showcase */}
+        <div className="mb-12 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          {[
+            { url: "https://lh3.googleusercontent.com/d/1v_rkcUZunVP49dHbnfSohmIiwpc2bYlj", title: "Specialty Ceramic Treatment 1" },
+            { url: "https://lh3.googleusercontent.com/d/19FoJ7wD4qcFFmbQF5QhWf6vcqJnlIIk4", title: "Specialty Ceramic Treatment 2" },
+            { url: "https://lh3.googleusercontent.com/d/1-QxM6thl3O3oT-qIMWSSg_B5PlcDhZ0-", title: "Specialty Ceramic Treatment 3" },
+            { url: "https://lh3.googleusercontent.com/d/1JBJCwmj1ZJwXRqDtxt4YLMgLK2EDMyLX", title: "Specialty Ceramic Treatment 4" }
+          ].map((img, idx) => (
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: idx * 0.1 }}
+              className="group relative h-48 sm:h-56 rounded-2xl overflow-hidden border border-white/10 bg-[#111113]"
+            >
+              <img
+                src={img.url}
+                alt={img.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                referrerPolicy="no-referrer"
+              />
+
+            </motion.div>
+          ))}
         </div>
 
         {/* Specialty Ceramic Treatments */}
@@ -263,7 +292,7 @@ export default function CeramicCoatingsDetailsPage({ onBack, onSelectService }: 
                 <div className="p-4 rounded-2xl bg-cyan-950/10 border border-cyan-500/10">
                   <p className="text-[10px] font-mono uppercase text-cyan-400 mb-1">Ideal For</p>
                   <p className="text-xs text-zinc-300 font-light leading-relaxed">
-                    Enhancing safety and clear sightlines during heavy Johannesburg rainstorms. Water beads off the screen automatically.
+                    Enhancing safety and clear sightlines during heavy seasonal rainstorms. Water beads off the screen automatically.
                   </p>
                 </div>
               </div>

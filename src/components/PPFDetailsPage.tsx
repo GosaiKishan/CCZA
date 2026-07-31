@@ -172,7 +172,7 @@ export default function PPFDetailsPage({ onBack, onSelectService }: PPFDetailsPa
                 Elite PPF Benefits
               </h2>
               <p className="text-zinc-500 text-xs sm:text-sm leading-relaxed font-light">
-                Why Johannesburg's most discerning car collectors and supercar enthusiasts choose Cartel Clean's advanced paint protection.
+                Why Lenasia's most discerning car collectors and supercar enthusiasts choose Cartel Clean's advanced paint protection.
               </p>
             </div>
 

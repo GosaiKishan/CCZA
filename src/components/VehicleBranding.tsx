@@ -120,7 +120,7 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                     </span>
                   </div>
                   <h3 className="text-xl sm:text-2xl font-display font-black text-white uppercase tracking-tight">
-                    Militia Defense <span className="text-zinc-500">—</span> <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">Vehicle Branding</span>
+                    Militia Defense — Vehicle Branding
                   </h3>
                 </div>
 
@@ -132,13 +132,13 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                       Design Concept
                     </h4>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4">
                     {VEHICLE_BRANDING_IMAGES.designConcepts.map((item) => (
-                      <div key={item.id} className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
+                      <div key={item.id} className="relative group w-full overflow-hidden rounded-xl bg-black/40 flex items-center justify-center">
                         <img
                           src={item.url}
                           alt={item.alt}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-auto max-h-[500px] lg:max-h-[360px] object-contain group-hover:scale-101 transition-transform duration-500"
                           referrerPolicy="no-referrer"
                           loading="lazy"
                           onError={(e) => {
@@ -162,13 +162,13 @@ export default function VehicleBranding({ onSelectService }: VehicleBrandingProp
                       Final Install
                     </h4>
                   </div>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 gap-4">
                     {VEHICLE_BRANDING_IMAGES.finalInstalls.map((item) => (
-                      <div key={item.id} className="relative group rounded-2xl overflow-hidden border border-white/10 bg-zinc-950 aspect-[16/10]">
+                      <div key={item.id} className="relative group w-full overflow-hidden rounded-xl bg-black/40 flex items-center justify-center">
                         <img
                           src={item.url}
                           alt={item.alt}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                          className="w-full h-auto max-h-[500px] lg:max-h-[360px] object-contain group-hover:scale-101 transition-transform duration-500"
                           referrerPolicy="no-referrer"
                           loading="lazy"
                           onError={(e) => {
